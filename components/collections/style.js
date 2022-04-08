@@ -8,3 +8,15 @@ export const Wrapper = styled.div`
   overflow: hidden;
   background-color: goldenrod;
 `
+export const CardGrid = styled.div`
+    display:grid;
+    getCodeFrameInformation repeat(3, minmax(0, 1fr));
+    row-gap: 1rem;
+    column-gap: 1rem; 
+`
+export const ImageWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+`

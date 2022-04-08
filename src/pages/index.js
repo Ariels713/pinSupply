@@ -4,12 +4,13 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Collection from '../../components/collections'
 // markup
+
 const IndexPage = ({ data }) => {
-  console.log(data)
+  const collectionData = data.allContentfulCollections.nodes
   return (
     <>
       <Layout>
-        <Collection />
+        <Collection data={collectionData} />
       </Layout>
     </>
   )

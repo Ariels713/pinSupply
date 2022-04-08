@@ -1,9 +1,19 @@
 import React from 'react'
-import { Wrapper } from './style.js'
-function Collection() {
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Wrapper, CardGrid, ImageWrapper } from './style.js'
+
+function Collection({ data }) {
+  console.log('data from collections', data)
   return (
     <Wrapper>
-      <h1>Collection</h1>
+      <CardGrid>
+        <ImageWrapper>
+          <GatsbyImage
+            image={getImage(data.collectionImage)}
+            alt='image test'
+          />
+        </ImageWrapper>
+      </CardGrid>
     </Wrapper>
   )
 }
