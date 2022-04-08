@@ -9,7 +9,7 @@ function Collection({ data }) {
       <CardGrid>
         <ImageWrapper>
           <GatsbyImage
-            image={getImage(data.collectionImage)}
+            image={getImage(data[0].collectionImage.bannerImage)}
             alt='image test'
           />
         </ImageWrapper>
