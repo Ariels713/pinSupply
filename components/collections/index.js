@@ -6,8 +6,10 @@ import {
   ImageWrapper,
   CollectionDescription,
 } from './style.js'
+import { createGlobalStyle } from 'styled-components'
 
 function Collection({ data }) {
+  console.log('%cData', 'color:dodgerblue', data)
   return (
     <Wrapper>
       <CardGrid>
