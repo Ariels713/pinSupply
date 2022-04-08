@@ -7,12 +7,20 @@ function Collection({ data }) {
   return (
     <Wrapper>
       <CardGrid>
-        <ImageWrapper>
-          <GatsbyImage
-            image={getImage(data[0].collectionImage.bannerImage)}
-            alt='image test'
-          />
-        </ImageWrapper>
+        {data.map((collection) => {
+          return (
+            <>
+              <ImageWrapper key={collection.id}>
+                <GatsbyImage
+                  image={getImage(collection.collectionTitle.bannerImage)}
+                  alt={collection.collectionTitle.alt}
+                />
+                <h3>{collection.collectionTitle.name}</h3>
+                <p>{collection.collectionTitle.description}</p>
+              </ImageWrapper>
+            </>
+          )
+        })}
       </CardGrid>
     </Wrapper>
   )

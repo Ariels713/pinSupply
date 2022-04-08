@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Collection from '../../components/collections'
 // markup
 
@@ -19,22 +18,20 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query MyQuery {
+  {
     allContentfulCollections {
       nodes {
+        id
         collectionTitle {
           name
-        }
-        collectionImage {
           bannerImage {
             gatsbyImageData(
-              layout: FIXED
+              layout: FULL_WIDTH
               placeholder: DOMINANT_COLOR
-              width: 400
+              width: 4000
             )
           }
-        }
-        description {
+          alt
           description
         }
       }
