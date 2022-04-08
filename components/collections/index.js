@@ -1,9 +1,13 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Wrapper, CardGrid, ImageWrapper } from './style.js'
+import {
+  Wrapper,
+  CardGrid,
+  ImageWrapper,
+  CollectionDescription,
+} from './style.js'
 
 function Collection({ data }) {
-  console.log('data from collections', data)
   return (
     <Wrapper>
       <CardGrid>
@@ -15,8 +19,10 @@ function Collection({ data }) {
                   image={getImage(collection.collectionTitle.bannerImage)}
                   alt={collection.collectionTitle.alt}
                 />
-                <h3>{collection.collectionTitle.name}</h3>
-                <p>{collection.collectionTitle.description}</p>
+                <h4>{collection.collectionTitle.name}</h4>
+                <CollectionDescription>
+                  {collection.collectionTitle.description}
+                </CollectionDescription>
               </ImageWrapper>
             </>
           )

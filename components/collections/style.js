@@ -20,3 +20,9 @@ export const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
 `
+export const CollectionDescription = styled.p`
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+`
