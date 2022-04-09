@@ -40,11 +40,16 @@
   }
 }
 
+html,
+body {
+  background-color: #fec7d7;
+}
+
 .wrapper {
   display: grid;
   place-content: center;
   min-height: 15vh;
-  background-color: hsl(256, 28%, 87%);
+  background-color: #f9f8fc;
 }
 
 .title {

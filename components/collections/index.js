@@ -19,7 +19,7 @@ function Collection({ data }) {
           return (
             <>
               <ImageWrapper key={collection.id}>
-                <Link to='/stickers'>
+                <Link to={collection.collectionTitle.slug}>
                   <GatsbyImage
                     image={getImage(collection.collectionTitle.bannerImage)}
                     alt={collection.collectionTitle.alt}
