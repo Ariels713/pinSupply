@@ -39,3 +39,14 @@
     --surface4: var(--surface4-dim);
   }
 }
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  min-height: 15vh;
+  background-color: hsl(256, 28%, 87%);
+}
+
+.title {
+  color: hsl(222, 52%, 11%);
+}

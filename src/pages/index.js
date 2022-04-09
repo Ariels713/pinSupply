@@ -23,6 +23,8 @@ export const query = graphql`
         id
         collectionTitle {
           name
+          alt
+          description
           bannerImage {
             gatsbyImageData(
               layout: FULL_WIDTH
@@ -30,8 +32,7 @@ export const query = graphql`
               width: 4000
             )
           }
-          alt
-          description
+          slug
         }
       }
     }

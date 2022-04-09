@@ -1,5 +1,7 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+
 import {
   Wrapper,
   CardGrid,
@@ -17,14 +19,16 @@ function Collection({ data }) {
           return (
             <>
               <ImageWrapper key={collection.id}>
-                <GatsbyImage
-                  image={getImage(collection.collectionTitle.bannerImage)}
-                  alt={collection.collectionTitle.alt}
-                />
-                <h4>{collection.collectionTitle.name}</h4>
-                <CollectionDescription>
-                  {collection.collectionTitle.description}
-                </CollectionDescription>
+                <Link to='/stickers'>
+                  <GatsbyImage
+                    image={getImage(collection.collectionTitle.bannerImage)}
+                    alt={collection.collectionTitle.alt}
+                  />
+                  <h4>{collection.collectionTitle.name}</h4>
+                  <CollectionDescription>
+                    {collection.collectionTitle.description}
+                  </CollectionDescription>
+                </Link>
               </ImageWrapper>
             </>
           )
