@@ -8,9 +8,6 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           id
           slug
-          collectionTitle {
-            name
-          }
         }
       }
     }
@@ -19,9 +16,11 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `${edge.slug}`,
       component: productPage,
-      //   context: {
-      //     title: edge.node.title,
-      //   },
+      context: {
+        title: edge.collectionTitle.name,
+        slug: edge.slug,
+        bannerImage: edge.collectionTitle.bannerImage,
+      },
     })
   })
 }
