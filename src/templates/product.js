@@ -1,12 +1,22 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/layout'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { HeroTitle, HeroWrapper, ImageWrapper } from './styles'
 
 function Products({ data }) {
-  console.log('product data', data)
+  console.log('product data', data.contentfulCollections)
+  const productAssets = data.contentfulCollections
   return (
     <Layout>
-      <h1>Product Page</h1>
+      <HeroWrapper>
+        <ImageWrapper>
+          <GatsbyImage
+            image={getImage(productAssets.collectionImage.bannerImage)}
+          />
+        </ImageWrapper>
+        <HeroTitle>{productAssets.collectionTitle.name}</HeroTitle>
+      </HeroWrapper>
     </Layout>
   )
 }

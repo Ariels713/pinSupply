@@ -17,9 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `${edge.slug}`,
       component: productPage,
       context: {
-        title: edge.collectionTitle.name,
         slug: edge.slug,
-        bannerImage: edge.collectionTitle.bannerImage,
       },
     })
   })
