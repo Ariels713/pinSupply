@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { HeroTitle, HeroWrapper, ImageWrapper } from './styles'
 
 function Products({ data }) {
-  console.log('product data', data.contentfulCollections)
+  console.log('product data', data)
   const productAssets = data.contentfulCollections
   return (
     <Layout>
@@ -33,6 +33,27 @@ export const query = graphql`
         bannerImage {
           gatsbyImageData(placeholder: DOMINANT_COLOR, layout: FULL_WIDTH)
         }
+      }
+    }
+    allContentfulProduct {
+      nodes {
+        colectionType {
+          bannerImage {
+            gatsbyImageData(
+              width: 420
+              height: 260
+              placeholder: DOMINANT_COLOR
+            )
+            description
+          }
+        }
+        title
+        description
+        price
+        compareAtPrice
+        slug
+        id
+        variant
       }
     }
   }
