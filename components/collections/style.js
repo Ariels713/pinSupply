@@ -11,7 +11,7 @@ export const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(, minmax(0, 1fr));
   row-gap: 1rem;
-  column-gap: 1rem;
+  column-gap: 3rem;
 
 
   @media (min-width: 640px){
@@ -28,13 +28,18 @@ export const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
 `
-export const CollectionDescription = styled.p`
+export const CollectionDescription = styled.div`
+  color: var(--gray-7);
+  cursor: default;
+  font-size: 0.875rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
   overflow: hidden;
-  color: #f9f8fc;
 `
 export const CollectionTitle = styled.h4`
+  margin-block: 1rem;
+  margin-block-end: 0.5rem;
   color: #0e172c;
+  cursor: default;
 `

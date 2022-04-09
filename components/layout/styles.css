@@ -46,12 +46,14 @@ body {
 }
 
 .wrapper {
+  --bg: #f9f8fc;
   display: grid;
   place-content: center;
   min-height: 15vh;
-  background-color: #f9f8fc;
+  background-color: var(--bg);
 }
 
 .title {
-  color: hsl(222, 52%, 11%);
+  --color: hsl(222, 52%, 11%);
+  color: var(--color);
 }
