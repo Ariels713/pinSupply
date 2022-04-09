@@ -27,9 +27,9 @@ export const query = graphql`
           description
           bannerImage {
             gatsbyImageData(
-              layout: FULL_WIDTH
               placeholder: DOMINANT_COLOR
-              width: 4000
+              width: 420
+              height: 280
             )
           }
           slug

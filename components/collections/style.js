@@ -13,6 +13,7 @@ export const CardGrid = styled.div`
   row-gap: 1rem;
   column-gap: 1rem;
 
+
   @media (min-width: 640px){
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -32,4 +33,8 @@ export const CollectionDescription = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+  color: #f9f8fc;
+`
+export const CollectionTitle = styled.h4`
+  color: #0e172c;
 `

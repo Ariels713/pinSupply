@@ -7,6 +7,7 @@ import {
   CardGrid,
   ImageWrapper,
   CollectionDescription,
+  CollectionTitle,
 } from './style.js'
 import { createGlobalStyle } from 'styled-components'
 
@@ -24,11 +25,13 @@ function Collection({ data }) {
                     image={getImage(collection.collectionTitle.bannerImage)}
                     alt={collection.collectionTitle.alt}
                   />
-                  <h4>{collection.collectionTitle.name}</h4>
-                  <CollectionDescription>
-                    {collection.collectionTitle.description}
-                  </CollectionDescription>
                 </Link>
+                <CollectionTitle>
+                  {collection.collectionTitle.name}
+                </CollectionTitle>
+                <CollectionDescription>
+                  {collection.collectionTitle.description}
+                </CollectionDescription>
               </ImageWrapper>
             </>
           )
