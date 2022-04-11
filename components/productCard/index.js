@@ -8,7 +8,7 @@ import {
   ImageWrapper,
   CollectionDescription,
   CollectionTitle,
-} from '../collections/style'
+} from '../collections/collectionsCard/styles.js'
 import { TitleWrapper, Price } from './styles'
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
