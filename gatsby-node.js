@@ -1,10 +1,16 @@
 const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const productPage = path.resolve(`./src/templates/index.js`)
+  const productPage = path.resolve(`./src/templates/collection/index.js`)
   const result = await graphql(`
     {
       allContentfulCollections {
+        nodes {
+          id
+          slug
+        }
+      }
+      allContentfulProduct {
         nodes {
           id
           slug

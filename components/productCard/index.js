@@ -9,7 +9,6 @@ import {
 } from '../collections/style'
 import { TitleWrapper, Price } from './styles'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Modal from '../modal'
 
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)

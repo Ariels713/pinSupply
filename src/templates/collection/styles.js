@@ -6,6 +6,7 @@ export const HeroWrapper = styled.div`
   place-items: center;
   height: max(40vh, 15rem);
   overflow: hidden;
+  margin-block-end: 2rem;
 
   & > * {
     grid-area: Stack;
