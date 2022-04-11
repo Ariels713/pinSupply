@@ -20,8 +20,12 @@ function Products({ data }) {
             alt={headerAsset.collectionTitle.name}
           />
         </ImageWrapper>
-        <HeroTitle>{headerAsset.collectionTitle.name}</HeroTitle>
+        <HeroTitle place='start center'>
+          {headerAsset.collectionTitle.name}
+        </HeroTitle>
       </HeroWrapper>
+
+      {/* Product Card, Data passed in via props */}
       <ProductCard
         cardAssets={cardAssets}
         variant={headerAsset.collectionTitle.name}

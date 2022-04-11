@@ -15,7 +15,7 @@ function ProductCard({ cardAssets = [], variant }) {
 
   //   Custom Hooks filters Data
   const [cardData, sortedData] = useCardData(card, variant)
-  console.log(sortedData)
+
   return (
     <>
       <Wrapper>
