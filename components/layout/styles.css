@@ -57,3 +57,7 @@ body {
   --color: hsl(222, 52%, 11%);
   color: var(--color);
 }
+
+.image-container {
+  max-height: 280px;
+}

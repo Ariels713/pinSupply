@@ -10,6 +10,7 @@ import {
 } from './styles.js'
 
 function CollectionCard({ data }) {
+  console.log(data)
   return (
     <Wrapper>
       <CardGrid>
@@ -22,6 +23,7 @@ function CollectionCard({ data }) {
                 <Link to={slug}>
                   <GatsbyImage image={getImage(bannerImage)} alt={alt} />
                 </Link>
+                <GatsbyImage image={getImage(collection.icon)} alt={alt} />
                 <CollectionTitle>{name}</CollectionTitle>
                 <CollectionDescription>{description}</CollectionDescription>
               </ImageWrapper>

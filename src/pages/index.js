@@ -34,6 +34,9 @@ export const query = graphql`
           }
           slug
         }
+        icon {
+          gatsbyImageData(placeholder: DOMINANT_COLOR)
+        }
       }
     }
   }
