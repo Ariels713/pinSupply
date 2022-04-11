@@ -26,7 +26,7 @@ function ProductCard({ cardAssets = [], variant }) {
                 <ImageWrapper key={card.id}>
                   <Link to={card.slug}>
                     <GatsbyImage
-                      image={getImage(card.colectionType.bannerImage)}
+                      image={getImage(card.mainImage)}
                       alt={card.title}
                     />
                     <CollectionTitle>{card.title}</CollectionTitle>

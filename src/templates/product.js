@@ -46,16 +46,6 @@ export const query = graphql`
     }
     allContentfulProduct {
       nodes {
-        colectionType {
-          bannerImage {
-            gatsbyImageData(
-              width: 420
-              height: 260
-              placeholder: DOMINANT_COLOR
-            )
-            description
-          }
-        }
         title
         description
         price
@@ -63,6 +53,9 @@ export const query = graphql`
         slug
         id
         variant
+        mainImage {
+          gatsbyImageData(placeholder: DOMINANT_COLOR, width: 420, height: 260)
+        }
       }
     }
   }
