@@ -59,5 +59,6 @@ body {
 }
 
 .image-container {
-  max-height: 280px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

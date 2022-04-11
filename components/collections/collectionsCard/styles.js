@@ -27,7 +27,7 @@ export const ImageWrapper = styled.div`
   position: relative;
   cursor: pointer;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 `

@@ -23,7 +23,15 @@ function CollectionCard({ data }) {
               <ImageWrapper key={collection.id}>
                 <ImageStackWrapper>
                   <Link to={slug}>
-                    <GatsbyImage image={getImage(bannerImage)} alt={alt} />
+                    <GatsbyImage
+                      style={{
+                        borderTopLeftRadius: '20px',
+                        borderTopRightRadius: '20px',
+                        overflow: 'hidden',
+                      }}
+                      image={getImage(bannerImage)}
+                      alt={alt}
+                    />
                   </Link>
 
                   <CollectionTitle place='end'>{name}</CollectionTitle>
