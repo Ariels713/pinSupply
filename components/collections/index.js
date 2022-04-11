@@ -10,6 +10,7 @@ import {
   CollectionTitle,
 } from './style.js'
 import { createGlobalStyle } from 'styled-components'
+import CollectionCard from './collectionsCard/index.js'
 
 function Collection({ data }) {
   return (
@@ -20,30 +21,7 @@ function Collection({ data }) {
           Collections
         </h3>
       </div>
-      <Wrapper>
-        <CardGrid>
-          {data.map((collection) => {
-            return (
-              <>
-                <ImageWrapper key={collection.id}>
-                  <Link to={collection.collectionTitle.slug}>
-                    <GatsbyImage
-                      image={getImage(collection.collectionTitle.bannerImage)}
-                      alt={collection.collectionTitle.alt}
-                    />
-                  </Link>
-                  <CollectionTitle>
-                    {collection.collectionTitle.name}
-                  </CollectionTitle>
-                  <CollectionDescription>
-                    {collection.collectionTitle.description}
-                  </CollectionDescription>
-                </ImageWrapper>
-              </>
-            )
-          })}
-        </CardGrid>
-      </Wrapper>
+      <CollectionCard data={data} />
     </>
   )
 }
