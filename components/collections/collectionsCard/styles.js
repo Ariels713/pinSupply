@@ -28,6 +28,8 @@ export const ImageWrapper = styled.div`
   cursor: pointer;
   width: 100%;
   overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 `
 export const CollectionDescription = styled.div`
   color: var(--gray-7);

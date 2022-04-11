@@ -49,7 +49,7 @@ body {
   --bg: #f9f8fc;
   display: grid;
   place-content: center;
-  min-height: 15vh;
+  min-height: 7vh;
   background-color: var(--bg);
 }
 
