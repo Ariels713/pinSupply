@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   margin: auto;
   padding: 1rem;
   overflow: hidden;
-  background: goldenrod;
 `
 export const DescriptionWrapper = styled.div`
   display: flex;
