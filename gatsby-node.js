@@ -28,7 +28,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  result.data.allContentfulProduct.nodes.forEach((edge) => {
+
+  result.data.allContentfulProduct.nodes.forEach((edge, index) => {
     createPage({
       path: `${edge.slug}`,
       component: product,

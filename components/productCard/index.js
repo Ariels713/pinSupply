@@ -16,7 +16,7 @@ function ProductCard({ cardAssets = [], variant }) {
   const modalRef = useRef()
   //   Custom Hooks filters Data
   const [cardData, sortedData] = useCardData(card, variant)
-  console.log(sortedData)
+
   return (
     <>
       <Wrapper>
@@ -25,7 +25,7 @@ function ProductCard({ cardAssets = [], variant }) {
             return (
               <>
                 <ImageWrapper key={card.id}>
-                  <Link to={card.slug}>
+                  <Link to={`/${card.slug}`}>
                     <GatsbyImage
                       image={getImage(card.mainImage)}
                       alt={card.title}
