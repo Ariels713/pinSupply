@@ -5,10 +5,11 @@ import ProductCard from '../../../components/productCard'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
   Wrapper,
-  CardGrid,
+  DescriptionWrapper,
   ImageWrapper,
   CollectionDescription,
   CollectionTitle,
+  Price,
 } from './styles.js'
 
 function Product({ data }) {
@@ -18,7 +19,20 @@ function Product({ data }) {
     <>
       <Layout>
         <Wrapper>
-          <CardGrid>
+          <GatsbyImage
+            image={getImage(productData.mainImage)}
+            alt={productData.title}
+          />
+          <DescriptionWrapper>
+            <CollectionTitle>{productData.title}</CollectionTitle>
+            <Price>&#36;{productData.price}</Price>
+          </DescriptionWrapper>
+
+          <CollectionDescription>
+            {productData.description}
+          </CollectionDescription>
+          <button>Add to Cart</button>
+          {/* <CardGrid>
             <ImageWrapper>
               <GatsbyImage
                 image={getImage(productData.mainImage)}
@@ -26,10 +40,7 @@ function Product({ data }) {
               />
             </ImageWrapper>
             <CollectionTitle>{productData.title}</CollectionTitle>
-            <CollectionDescription>
-              {productData.description}
-            </CollectionDescription>
-          </CardGrid>
+          </CardGrid> */}
         </Wrapper>
       </Layout>
     </>

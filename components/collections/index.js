@@ -23,10 +23,6 @@ function Collection({ data }) {
       <Wrapper>
         <CardGrid>
           {data.map((collection) => {
-            console.log(
-              'collection.collectionTitle.slug',
-              collection.collectionTitle.slug
-            )
             return (
               <>
                 <ImageWrapper key={collection.id}>

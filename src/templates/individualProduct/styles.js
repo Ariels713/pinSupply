@@ -1,27 +1,18 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  max-width: 80rem;
+  width: min(100% - 2rem, 450px);
   margin: auto;
-  padding-block: 2rem;
-  padding-start: 1rem;
+  padding: 1rem;
   overflow: hidden;
+  background: goldenrod;
 `
-export const CardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(, minmax(0, 1fr));
-  row-gap: 1rem;
-  column-gap: 3rem;
-  padding-inline: 1rem;
-
-  @media (min-width: 640px){
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  @media (min-width: 1024px){
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
+export const DescriptionWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
+
 export const ImageWrapper = styled.div`
   position: relative;
   cursor: pointer;
@@ -43,4 +34,9 @@ export const CollectionTitle = styled.h4`
   color: #0e172c;
   cursor: default;
   text-transform: capitalize;
+`
+
+export const Price = styled.h4`
+  font-weight: var(--font-weight-9);
+  color: var(--gray-7);
 `

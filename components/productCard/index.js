@@ -43,7 +43,7 @@ function ProductCard({ cardAssets = [], variant }) {
                       setOpenModal(true)
                     }}
                   >
-                    Buy Now!
+                    Details
                   </button>
                 </ImageWrapper>
               </>
