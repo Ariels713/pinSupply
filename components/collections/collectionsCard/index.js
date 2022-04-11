@@ -14,21 +14,16 @@ function CollectionCard({ data }) {
     <Wrapper>
       <CardGrid>
         {data.map((collection) => {
+          const { slug, bannerImage, alt, name, description } =
+            collection.collectionTitle
           return (
             <>
               <ImageWrapper key={collection.id}>
-                <Link to={collection.collectionTitle.slug}>
-                  <GatsbyImage
-                    image={getImage(collection.collectionTitle.bannerImage)}
-                    alt={collection.collectionTitle.alt}
-                  />
+                <Link to={slug}>
+                  <GatsbyImage image={getImage(bannerImage)} alt={alt} />
                 </Link>
-                <CollectionTitle>
-                  {collection.collectionTitle.name}
-                </CollectionTitle>
-                <CollectionDescription>
-                  {collection.collectionTitle.description}
-                </CollectionDescription>
+                <CollectionTitle>{name}</CollectionTitle>
+                <CollectionDescription>{description}</CollectionDescription>
               </ImageWrapper>
             </>
           )
