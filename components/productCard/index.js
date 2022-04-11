@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import useCardData from '../../utils/useCardData'
 import {
   Wrapper,
@@ -7,15 +7,17 @@ import {
   CollectionDescription,
   CollectionTitle,
 } from '../collections/style'
+import { TitleWrapper, Price } from './styles'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import Modal from '../modal'
 
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
-
+  const [openModal, setOpenModal] = useState(false)
+  const modalRef = useRef()
   //   Custom Hooks filters Data
   const [cardData, sortedData] = useCardData(card, variant)
-
+  console.log(sortedData)
   return (
     <>
       <Wrapper>
@@ -24,16 +26,24 @@ function ProductCard({ cardAssets = [], variant }) {
             return (
               <>
                 <ImageWrapper key={card.id}>
-                  <Link to={card.slug}>
-                    <GatsbyImage
-                      image={getImage(card.mainImage)}
-                      alt={card.title}
-                    />
+                  <GatsbyImage
+                    image={getImage(card.mainImage)}
+                    alt={card.title}
+                  />
+                  <TitleWrapper>
                     <CollectionTitle>{card.title}</CollectionTitle>
-                    <CollectionDescription>
-                      {card.description}
-                    </CollectionDescription>
-                  </Link>
+                    <Price>&#36;{card.price}</Price>
+                  </TitleWrapper>
+                  <CollectionDescription>
+                    {card.description}
+                  </CollectionDescription>
+                  <button
+                    onClick={() => {
+                      setOpenModal(true)
+                    }}
+                  >
+                    Buy Now!
+                  </button>
                 </ImageWrapper>
               </>
             )
