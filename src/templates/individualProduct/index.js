@@ -32,15 +32,6 @@ function Product({ data }) {
             {productData.description}
           </CollectionDescription>
           <button>Add to Cart</button>
-          {/* <CardGrid>
-            <ImageWrapper>
-              <GatsbyImage
-                image={getImage(productData.mainImage)}
-                alt={productData.title}
-              />
-            </ImageWrapper>
-            <CollectionTitle>{productData.title}</CollectionTitle>
-          </CardGrid> */}
         </Wrapper>
       </Layout>
     </>

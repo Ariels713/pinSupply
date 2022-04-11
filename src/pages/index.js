@@ -1,14 +1,14 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
-import Collection from '../../components/collections'
+import CollectionsHeader from '../../components/collections/collectionsHeader'
 
 const IndexPage = ({ data }) => {
   const collectionData = data.allContentfulCollections.nodes
   return (
     <>
       <Layout>
-        <Collection data={collectionData} />
+        <CollectionsHeader data={collectionData} />
       </Layout>
     </>
   )
