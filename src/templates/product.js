@@ -4,19 +4,28 @@ import Layout from '../../components/layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { HeroTitle, HeroWrapper, ImageWrapper } from './styles'
 
+import ProductCard from '../../components/productCard'
+
 function Products({ data }) {
-  console.log('product data', data)
-  const productAssets = data.contentfulCollections
+  const headerAsset = data.contentfulCollections
+  const cardAssets = data.allContentfulProduct.nodes
+
   return (
     <Layout>
+      {/* Hero Styles / Data */}
       <HeroWrapper>
         <ImageWrapper>
           <GatsbyImage
-            image={getImage(productAssets.collectionImage.bannerImage)}
+            image={getImage(headerAsset.collectionImage.bannerImage)}
+            alt={headerAsset.collectionTitle.name}
           />
         </ImageWrapper>
-        <HeroTitle>{productAssets.collectionTitle.name}</HeroTitle>
+        <HeroTitle>{headerAsset.collectionTitle.name}</HeroTitle>
       </HeroWrapper>
+      <ProductCard
+        cardAssets={cardAssets}
+        variant={headerAsset.collectionTitle.name}
+      />
     </Layout>
   )
 }

@@ -12,7 +12,7 @@ export const CardGrid = styled.div`
   grid-template-columns: repeat(, minmax(0, 1fr));
   row-gap: 1rem;
   column-gap: 3rem;
-
+  padding-inline: 1rem;
 
   @media (min-width: 640px){
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -42,4 +42,5 @@ export const CollectionTitle = styled.h4`
   margin-block-end: 0.5rem;
   color: #0e172c;
   cursor: default;
+  text-transform: capitalize;
 `
