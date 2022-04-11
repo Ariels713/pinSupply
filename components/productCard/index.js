@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 import useCardData from '../../utils/useCardData'
 import {
   Wrapper,
@@ -8,8 +10,6 @@ import {
   CollectionTitle,
 } from '../collections/style'
 import { TitleWrapper, Price } from './styles'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
   const [openModal, setOpenModal] = useState(false)
@@ -25,10 +25,12 @@ function ProductCard({ cardAssets = [], variant }) {
             return (
               <>
                 <ImageWrapper key={card.id}>
-                  <GatsbyImage
-                    image={getImage(card.mainImage)}
-                    alt={card.title}
-                  />
+                  <Link to={card.slug}>
+                    <GatsbyImage
+                      image={getImage(card.mainImage)}
+                      alt={card.title}
+                    />
+                  </Link>
                   <TitleWrapper>
                     <CollectionTitle>{card.title}</CollectionTitle>
                     <Price>&#36;{card.price}</Price>
