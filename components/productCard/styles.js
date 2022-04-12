@@ -124,15 +124,3 @@ export const Button = styled.button`
   padding: 12px 40px;
   text-align: center;
 `
-export const SaleTag = styled.div`
-  padding-inline: 0.75rem;
-  padding-block: 0.25rem;
-  background-color: #f8f9fa;
-  border-radius: 20px;
-  color: var(--yellow-8);
-  z-index: 2;
-  place-self: ${(props) => props.place};
-  margin-block-start: -17px;
-  margin-inline-end: -18px;
-  font-weight: var(--font-weight-6);
-`

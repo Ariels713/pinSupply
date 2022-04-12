@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../../components/layout'
 import ProductCard from '../../../components/productCard'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { SaleTag } from '../../../components/layout/styles'
 import {
   Wrapper,
   DescriptionWrapper,
@@ -12,10 +13,13 @@ import {
   Price,
   ImageStackWrapper,
   Button,
+  SalePrice,
 } from './styles.js'
 
 function Product({ data, children }) {
-  const productData = data.contentfulProduct
+  console.log('card', data.contentfulProduct)
+  const { mainImage, title, price, description, compareAtPrice } =
+    data.contentfulProduct
   return (
     <>
       <Layout>
@@ -27,8 +31,8 @@ function Product({ data, children }) {
         <Wrapper>
           <ImageStackWrapper>
             <GatsbyImage
-              image={getImage(productData.mainImage)}
-              alt={productData.title}
+              image={getImage(mainImage)}
+              alt={title}
               style={{
                 borderTopLeftRadius: '20px',
                 borderTopRightRadius: '20px',
@@ -36,14 +40,17 @@ function Product({ data, children }) {
               }}
             />
             <DescriptionWrapper place='end center'>
-              <CollectionTitle>{productData.title}</CollectionTitle>
-              <Price>&#36;{productData.price}</Price>
+              <CollectionTitle>{title}</CollectionTitle>
+              {!compareAtPrice ? (
+                <Price>&#36;{price}</Price>
+              ) : (
+                <SalePrice>&#36;{price}</SalePrice>
+              )}
             </DescriptionWrapper>
+            {!compareAtPrice ? null : <SaleTag place='start end'>Sale</SaleTag>}
           </ImageStackWrapper>
 
-          <CollectionDescription>
-            {productData.description}
-          </CollectionDescription>
+          <CollectionDescription>{description}</CollectionDescription>
           <Button>Add to Cart</Button>
         </Wrapper>
       </Layout>

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import useCardData from '../../utils/useCardData'
-import { CardGrid } from '../layout/styles'
+import { CardGrid, SaleTag } from '../layout/styles'
 import {
   GridWrapper,
   Wrapper,
@@ -14,7 +14,6 @@ import {
   CollectionTitle,
   CollectionDescription,
   Button,
-  SaleTag,
 } from './styles'
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)

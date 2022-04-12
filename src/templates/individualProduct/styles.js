@@ -43,6 +43,7 @@ export const CollectionTitle = styled.h4`
   border-radius: 20px;
   margin-bottom: -28px;
   margin-left: 10px;
+  font-size: var(--font-size-2);
 `
 
 export const Price = styled.h4`
@@ -54,6 +55,18 @@ export const Price = styled.h4`
   border-radius: 20px;
   margin-block-end: -28px;
   margin-inline-end: 0.5rem;
+  font-size: var(--font-size-2);
+`
+export const SalePrice = styled.h4`
+  font-weight: var(--font-weight-7);
+  color: var(--red-6);
+  background: #f8f9fa;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border-radius: 20px;
+  margin-block-end: -28px;
+  margin-inline-end: 0.5rem;
+  font-size: var(--font-size-2);
 `
 
 export const ImageStackWrapper = styled.div`
