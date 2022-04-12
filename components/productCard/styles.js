@@ -5,7 +5,7 @@ export const TitleWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-export const Price = styled.h4`
+export const Price = styled.h2`
   font-weight: var(--font-weight-9);
   color: var(--gray-7);
 `

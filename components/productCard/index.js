@@ -12,8 +12,7 @@ import {
 import { TitleWrapper, Price } from './styles'
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
-  const [openModal, setOpenModal] = useState(false)
-  const modalRef = useRef()
+
   //   Custom Hooks filters Data
   const [cardData, sortedData] = useCardData(card, variant)
 
@@ -29,6 +28,11 @@ function ProductCard({ cardAssets = [], variant }) {
                     <GatsbyImage
                       image={getImage(card.mainImage)}
                       alt={card.title}
+                      style={{
+                        borderTopLeftRadius: '20px',
+                        borderTopRightRadius: '20px',
+                        overflow: 'hidden',
+                      }}
                     />
                   </Link>
                   <TitleWrapper>
@@ -38,13 +42,7 @@ function ProductCard({ cardAssets = [], variant }) {
                   <CollectionDescription>
                     {card.description}
                   </CollectionDescription>
-                  <button
-                    onClick={() => {
-                      setOpenModal(true)
-                    }}
-                  >
-                    Details
-                  </button>
+                  <button>Details</button>
                 </ImageWrapper>
               </>
             )
