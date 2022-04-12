@@ -12,11 +12,12 @@ function Slash(props) {
       xmlns='http://www.w3.org/2000/svg'
     >
       <title>{title}</title>
-      <g fill='hsla(220, 7%, 53%, 1.00)'>
+      <g fill='#0e172c'>
         <rect
           height='2'
           width='18.97'
-          fill='hsla(220, 7%, 53%, 1.00)'
+          fill='#0e172c'
+          stroke='none'
           transform='translate(-3.314 8) rotate(-45)'
           x='-1.485'
           y='7'
