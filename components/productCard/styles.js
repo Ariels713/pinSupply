@@ -16,6 +16,15 @@ export const CardGrid = styled.div`
   }
 
 `
+
+export const GridWrapper = styled.div`
+  max-width: 80rem;
+  margin: auto;
+  padding-block: 2rem;
+  padding-start: 1rem;
+  overflow: hidden;
+`
+
 export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -71,6 +80,17 @@ export const CollectionTitle = styled.h4`
 export const Price = styled.h4`
   font-weight: var(--font-weight-7);
   color: var(--gray-7);
+  background: #f8f9fa;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border-radius: 20px;
+  margin-block-end: -28px;
+  margin-inline-end: 0.5rem;
+  font-size: var(--font-size-2);
+`
+export const SalePrice = styled.h4`
+  font-weight: var(--font-weight-7);
+  color: var(--red-6);
   background: #f8f9fa;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;

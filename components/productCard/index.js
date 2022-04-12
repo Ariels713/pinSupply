@@ -4,9 +4,11 @@ import { Link } from 'gatsby'
 import useCardData from '../../utils/useCardData'
 import { CardGrid } from '../layout/styles'
 import {
+  GridWrapper,
   Wrapper,
   TitleWrapper,
   Price,
+  SalePrice,
   ImageStackWrapper,
   DescriptionWrapper,
   CollectionTitle,
@@ -21,39 +23,57 @@ function ProductCard({ cardAssets = [], variant }) {
 
   return (
     <>
-      <CardGrid>
-        {sortedData.map((card) => {
-          const { id, slug, title, price, description, compareAt, mainImage } =
-            card
-          return (
-            <>
-              <Wrapper>
-                <ImageStackWrapper key={id}>
+      <GridWrapper>
+        <CardGrid>
+          {sortedData.map((card) => {
+            {
+              /* console.log('cards', card) */
+            }
+            const {
+              id,
+              slug,
+              title,
+              price,
+              description,
+              compareAtPrice,
+              mainImage,
+            } = card
+
+            return (
+              <>
+                <Wrapper>
+                  <ImageStackWrapper key={id}>
+                    <Link to={`/${slug}`}>
+                      <GatsbyImage
+                        image={getImage(mainImage)}
+                        alt={title}
+                        style={{
+                          borderTopLeftRadius: '20px',
+                          borderTopRightRadius: '20px',
+                          overflow: 'hidden',
+                        }}
+                      />
+                    </Link>
+                    <DescriptionWrapper place='end center'>
+                      <CollectionTitle>{title}</CollectionTitle>
+                      {/* <Price>&#36;{price}</Price> */}
+                      {compareAtPrice ? (
+                        <Price>&#36;{price}</Price>
+                      ) : (
+                        <SalePrice>&#36;{compareAtPrice}</SalePrice>
+                      )}
+                    </DescriptionWrapper>
+                  </ImageStackWrapper>
+                  <CollectionDescription>{description}</CollectionDescription>
                   <Link to={`/${slug}`}>
-                    <GatsbyImage
-                      image={getImage(mainImage)}
-                      alt={title}
-                      style={{
-                        borderTopLeftRadius: '20px',
-                        borderTopRightRadius: '20px',
-                        overflow: 'hidden',
-                      }}
-                    />
+                    <Button>Details</Button>
                   </Link>
-                  <DescriptionWrapper place='end center'>
-                    <CollectionTitle>{title}</CollectionTitle>
-                    <Price>&#36;{price}</Price>
-                  </DescriptionWrapper>
-                </ImageStackWrapper>
-                <CollectionDescription>{description}</CollectionDescription>
-                <Link to={`/${slug}`}>
-                  <Button>Details</Button>
-                </Link>
-              </Wrapper>
-            </>
-          )
-        })}
-      </CardGrid>
+                </Wrapper>
+              </>
+            )
+          })}
+        </CardGrid>
+      </GridWrapper>
     </>
   )
 }
