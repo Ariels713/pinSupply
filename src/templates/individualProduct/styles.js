@@ -5,6 +5,9 @@ export const Wrapper = styled.div`
   margin: auto;
   padding: 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `
 export const DescriptionWrapper = styled.div`
   display: flex;
@@ -22,7 +25,7 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 `
 export const CollectionDescription = styled.div`
-  color: var(--gray-7);
+  color: var(--gray-6);
   cursor: default;
   font-size: 0.875rem;
   display: -webkit-box;
@@ -62,4 +65,25 @@ export const ImageStackWrapper = styled.div`
   & > * {
     grid-area: Stack;
   }
+`
+
+export const Button = styled.button`
+  appearance: button;
+  background-color: #0e182b;
+  border: 1px solid #0e182b;
+  border-radius: 20px;
+  box-shadow: #f8f9fa 4px 4px 0 0, #000 4px 4px 0 1px;
+  color: #f8f9fa;
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--font-size-1);
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 `

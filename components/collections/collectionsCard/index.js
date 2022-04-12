@@ -15,7 +15,6 @@ function CollectionCard({ data }) {
     <Wrapper>
       <CardGrid>
         {data.map((collection) => {
-          console.log(collection.icon)
           const { slug, bannerImage, alt, name, description } =
             collection.collectionTitle
           return (

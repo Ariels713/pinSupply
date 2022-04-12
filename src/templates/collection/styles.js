@@ -18,12 +18,12 @@ export const ImageWrapper = styled.div`
   width: 100%;
 `
 
-export const HeroTitle = styled.h2`
+export const HeroTitle = styled.h3`
   z-index: 2;
   place-self: ${(props) => props.place};
   text-transform: uppercase;
   margin-block-start: 20vh;
-  font-size: var(--font-size-8);
+  font-size: var(--font-size-5);
   background: #f8f9fa;
   padding-inline: 2rem;
   padding-block: 0.5rem;

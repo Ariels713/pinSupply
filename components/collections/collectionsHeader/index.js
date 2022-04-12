@@ -9,13 +9,13 @@ import {
 import { createGlobalStyle } from 'styled-components'
 import CollectionCard from '../collectionsCard/index.js'
 
-function CollectionsHeader({ data }) {
+function CollectionsHeader({ data, children }) {
   return (
     <>
       {/* Usning Inline styles in order to overwrite CSS Variables in global styles */}
       <div className='wrapper' style={{ '--bg': '#0e172c' }}>
         <h3 className='title' style={{ '--color': '#fff' }}>
-          Collections
+          {children ?? <p>Collection</p>}
         </h3>
       </div>
       <CollectionCard data={data} />

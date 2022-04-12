@@ -11,14 +11,20 @@ import {
   CollectionTitle,
   Price,
   ImageStackWrapper,
+  Button,
 } from './styles.js'
 
-function Product({ data }) {
+function Product({ data, children }) {
   const productData = data.contentfulProduct
-
+  console.log('datas', data)
   return (
     <>
       <Layout>
+        <div className='wrapper' style={{ '--bg': '#0e172c' }}>
+          <h3 className='title' style={{ '--color': '#fff' }}>
+            {children ?? <p>Collection</p>}
+          </h3>
+        </div>
         <Wrapper>
           <ImageStackWrapper>
             <GatsbyImage
@@ -39,7 +45,7 @@ function Product({ data }) {
           <CollectionDescription>
             {productData.description}
           </CollectionDescription>
-          <button>Add to Cart</button>
+          <Button>Add to Cart</Button>
         </Wrapper>
       </Layout>
     </>
