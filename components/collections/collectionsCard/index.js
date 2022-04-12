@@ -1,9 +1,10 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
+import { CardGrid } from '../../layout/styles'
 import {
   Wrapper,
-  CardGrid,
+  // CardGrid,
   ImageWrapper,
   CollectionDescription,
   CollectionTitle,

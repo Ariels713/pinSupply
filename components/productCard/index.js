@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import useCardData from '../../utils/useCardData'
@@ -7,7 +7,6 @@ import {
   CardWrapper,
   CardGrid,
   Wrapper,
-  TitleWrapper,
   Price,
   ImageStackWrapper,
   DescriptionWrapper,
@@ -16,10 +15,10 @@ import {
   Button,
 } from './styles'
 function ProductCard({ cardAssets = [], variant }) {
-  const [card, setCardData] = useState(cardAssets)
+  const [card] = useState(cardAssets)
 
   //   Custom Hooks filters Data
-  const [cardData, sortedData] = useCardData(card, variant)
+  const [sortedData] = useCardData(card, variant)
 
   return (
     <>
