@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
   display: grid;
   place-content: center;
-  padding-inline-start: 1rem;
+  padding-block-start: 1rem;
 `
 
 export const OrderedList = styled.ol`
@@ -15,7 +15,7 @@ export const OrderedList = styled.ol`
 export const Anchor = styled.a`
   cursor: pointer;
   list-style: none;
-  color: var(--color-secondary);
+  color: var(--lime-7);
   margin-inline-start: 1rem;
   font-size: 1rem;
   font-weight: 500;
