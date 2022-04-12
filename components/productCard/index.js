@@ -24,7 +24,7 @@ function ProductCard({ cardAssets = [], variant }) {
 
   return (
     <>
-      <Breadcrumbs />
+      <Breadcrumbs slug={variant} />
       <GridWrapper>
         <CardGrid>
           {sortedData.map((card) => {

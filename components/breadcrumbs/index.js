@@ -2,7 +2,8 @@ import React from 'react'
 import Slash from './Slash'
 import { Nav, OrderedList, Anchor, AnchorWrapper } from './styles.js'
 import { Link } from 'gatsby'
-function Breadcrumbs() {
+function Breadcrumbs({ slug }) {
+  console.log('slug slug', slug)
   return (
     <>
       <Nav>
@@ -17,8 +18,8 @@ function Breadcrumbs() {
           </li>
           <li>
             <AnchorWrapper>
-              <Link href='/'>
-                <Anchor>Stickers</Anchor>
+              <Link href={`/${slug}`}>
+                <Anchor>{slug}</Anchor>
               </Link>
             </AnchorWrapper>
           </li>

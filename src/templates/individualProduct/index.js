@@ -17,7 +17,6 @@ import {
 } from './styles.js'
 
 function Product({ data, children }) {
-  console.log('card', data.contentfulProduct)
   const { mainImage, title, price, description, compareAtPrice } =
     data.contentfulProduct
   return (
