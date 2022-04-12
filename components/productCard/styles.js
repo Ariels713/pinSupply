@@ -4,7 +4,7 @@ export const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(, minmax(0, 1fr));
   row-gap: 1rem;
-  column-gap: 3rem;
+  column-gap: 1rem;
   padding-inline: 1rem;
 
 
