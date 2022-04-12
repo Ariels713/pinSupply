@@ -16,15 +16,6 @@ export const CardGrid = styled.div`
   }
 
 `
-
-export const CardWrapper = styled.div`
-  max-width: 70rem;
-  margin: auto;
-  padding-block: 2rem;
-  padding-start: 1rem;
-  overflow: hidden;
-`
-
 export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
