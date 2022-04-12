@@ -1,4 +1,5 @@
 import React from 'react'
+import Breadcrumbs from '../../breadcrumbs/index.js'
 import CollectionCard from '../collectionsCard/index.js'
 
 function CollectionsHeader({ data, children }) {

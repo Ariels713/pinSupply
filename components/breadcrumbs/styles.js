@@ -1,16 +1,18 @@
 import styled from 'styled-components'
 
-const Nav = styled.nav`
-  display: flex;
+export const Nav = styled.nav`
+  display: grid;
+  place-content: center;
+  padding: 1rem;
 `
 
-const OrderedList = styled.ol`
+export const OrderedList = styled.ol`
   display: flex;
   align-items: center;
   margin-left: 1rem;
 `
 
-const Anchor = styled.a`
+export const Anchor = styled.a`
   cursor: pointer;
   list-style: none;
   color: var(--color-secondary);
@@ -22,7 +24,7 @@ const Anchor = styled.a`
   }
 `
 
-const AnchorWrapper = styled.div`
+export const AnchorWrapper = styled.div`
   display: flex;
   align-items: center;
 `

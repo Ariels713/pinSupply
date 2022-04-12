@@ -63,6 +63,8 @@ body {
   border-top-right-radius: 20px;
 }
 
-.active {
-  display: none;
+:where(ul, ol):where([role='list']) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

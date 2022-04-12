@@ -15,6 +15,7 @@ import {
   CollectionDescription,
   Button,
 } from './styles'
+import Breadcrumbs from '../breadcrumbs'
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
 
@@ -23,6 +24,7 @@ function ProductCard({ cardAssets = [], variant }) {
 
   return (
     <>
+      <Breadcrumbs />
       <GridWrapper>
         <CardGrid>
           {sortedData.map((card) => {

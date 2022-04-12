@@ -1,46 +1,29 @@
 import React from 'react'
 import Slash from './Slash'
-import {Nav, OrderedList, Anchor, AnchorWrapper} from './styles.js'
-
+import { Nav, OrderedList, Anchor, AnchorWrapper } from './styles.js'
+import { Link } from 'gatsby'
 function Breadcrumbs() {
   return (
     <>
-            <Nav>
-        <OrderedList role="list">
+      <Nav>
+        <OrderedList role='list'>
           <li>
             <AnchorWrapper>
-              <Link href="/apparel" passHref>
-                <Anchor>Apparel</Anchor>
+              <Link href='/'>
+                <Anchor>Home</Anchor>
               </Link>
               <Slash />
             </AnchorWrapper>
           </li>
           <li>
             <AnchorWrapper>
-              <Link href="/shoes" passHref>
-                <Anchor>Shoes</Anchor>
-              </Link>
-              <Slash />
-            </AnchorWrapper>
-          </li>
-          <li>
-            <AnchorWrapper>
-              <Link href="/socks" passHref>
-                <Anchor>Socks</Anchor>
-              </Link>
-              <Slash />
-            </AnchorWrapper>
-          </li>
-          <li>
-            <AnchorWrapper>
-              <Link href="/underwear" passHref>
-                <Anchor>Underwear</Anchor>
+              <Link href='/'>
+                <Anchor>Stickers</Anchor>
               </Link>
             </AnchorWrapper>
           </li>
         </OrderedList>
       </Nav>
-    </>
     </>
   )
 }
