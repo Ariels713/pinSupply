@@ -9,7 +9,7 @@ function Breadcrumbs({ slug }) {
         <OrderedList role='list'>
           <li>
             <AnchorWrapper>
-              <Link href='/'>
+              <Link to='/'>
                 <Anchor>Home</Anchor>
               </Link>
               <Slash />
@@ -17,7 +17,7 @@ function Breadcrumbs({ slug }) {
           </li>
           <li>
             <AnchorWrapper>
-              <Link href={`/${slug}`}>
+              <Link to={`/${slug}`}>
                 <Anchor>{slug}</Anchor>
               </Link>
             </AnchorWrapper>
