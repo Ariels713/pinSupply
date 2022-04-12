@@ -18,9 +18,14 @@ import {
 import Breadcrumbs from '../../../components/breadcrumbs'
 
 function Product({ data, children }) {
-  console.log('data', data)
-  const { mainImage, title, price, description, compareAtPrice } =
-    data.contentfulProduct
+  const {
+    mainImage,
+    title,
+    price,
+    description,
+    compareAtPrice,
+    colectionType,
+  } = data.contentfulProduct
   return (
     <>
       <Layout>
@@ -29,7 +34,7 @@ function Product({ data, children }) {
             {children ?? <p>Collection</p>}
           </h3>
         </div>
-        <Breadcrumbs />
+        <Breadcrumbs slug={colectionType.name} />
         <Wrapper>
           <ImageStackWrapper>
             <GatsbyImage
@@ -72,6 +77,9 @@ export const query = graphql`
       title
       mainImage {
         gatsbyImageData(placeholder: DOMINANT_COLOR, height: 280, width: 420)
+      }
+      colectionType {
+        name
       }
     }
   }
