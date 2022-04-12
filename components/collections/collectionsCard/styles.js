@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  max-width: 80rem;
+  max-width: 70rem;
   margin: auto;
   padding-block: 2rem;
   padding-start: 1rem;
@@ -48,6 +48,7 @@ export const CollectionTitle = styled.h4`
   place-self: ${(props) => props.place};
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: -15px;
   background: #f8f9fa;
   padding-inline: 1rem;
   padding-block-start: 0.25rem;
@@ -58,8 +59,6 @@ export const ImageStackWrapper = styled.div`
   display: grid;
   grid-template-areas: 'Stack';
   place-items: center;
-  /* height: max(40vh, 15rem); */
-  overflow: hidden;
   margin-block-end: 2rem;
 
   & > * {

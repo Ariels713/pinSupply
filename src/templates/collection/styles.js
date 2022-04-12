@@ -24,4 +24,8 @@ export const HeroTitle = styled.h2`
   text-transform: uppercase;
   margin-block-start: 20vh;
   font-size: var(--font-size-8);
+  background: #f8f9fa;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 9999px;
 `
