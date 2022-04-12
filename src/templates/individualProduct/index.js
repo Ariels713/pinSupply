@@ -15,8 +15,10 @@ import {
   Button,
   SalePrice,
 } from './styles.js'
+import Breadcrumbs from '../../../components/breadcrumbs'
 
 function Product({ data, children }) {
+  console.log('data', data)
   const { mainImage, title, price, description, compareAtPrice } =
     data.contentfulProduct
   return (
@@ -27,6 +29,7 @@ function Product({ data, children }) {
             {children ?? <p>Collection</p>}
           </h3>
         </div>
+        <Breadcrumbs />
         <Wrapper>
           <ImageStackWrapper>
             <GatsbyImage

@@ -3,7 +3,6 @@ import Slash from './Slash'
 import { Nav, OrderedList, Anchor, AnchorWrapper } from './styles.js'
 import { Link } from 'gatsby'
 function Breadcrumbs({ slug }) {
-  console.log('slug slug', slug)
   return (
     <>
       <Nav>

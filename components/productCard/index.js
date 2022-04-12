@@ -28,7 +28,6 @@ function ProductCard({ cardAssets = [], variant }) {
       <GridWrapper>
         <CardGrid>
           {sortedData.map((card) => {
-            console.log('card', card)
             const {
               id,
               slug,
