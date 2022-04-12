@@ -23,14 +23,16 @@ function ProductCard({ cardAssets = [], variant }) {
     <>
       <CardGrid>
         {sortedData.map((card) => {
+          const { id, slug, title, price, description, compareAt, mainImage } =
+            card
           return (
             <>
               <Wrapper>
-                <ImageStackWrapper key={card.id}>
-                  <Link to={`/${card.slug}`}>
+                <ImageStackWrapper key={id}>
+                  <Link to={`/${slug}`}>
                     <GatsbyImage
-                      image={getImage(card.mainImage)}
-                      alt={card.title}
+                      image={getImage(mainImage)}
+                      alt={title}
                       style={{
                         borderTopLeftRadius: '20px',
                         borderTopRightRadius: '20px',
@@ -39,14 +41,12 @@ function ProductCard({ cardAssets = [], variant }) {
                     />
                   </Link>
                   <DescriptionWrapper place='end center'>
-                    <CollectionTitle>{card.title}</CollectionTitle>
-                    <Price>&#36;{card.price}</Price>
+                    <CollectionTitle>{title}</CollectionTitle>
+                    <Price>&#36;{price}</Price>
                   </DescriptionWrapper>
                 </ImageStackWrapper>
-                <CollectionDescription>
-                  {card.description}
-                </CollectionDescription>
-                <Link to={`/${card.slug}`} style={{ display: 'inline-block' }}>
+                <CollectionDescription>{description}</CollectionDescription>
+                <Link to={`/${slug}`}>
                   <Button>Details</Button>
                 </Link>
               </Wrapper>

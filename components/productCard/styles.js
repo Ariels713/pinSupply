@@ -92,22 +92,15 @@ export const ImageStackWrapper = styled.div`
 `
 
 export const Button = styled.button`
-  appearance: button;
+  width: 100%;
   background-color: #0e182b;
   border: 1px solid #0e182b;
   border-radius: 20px;
   box-shadow: #f8f9fa 4px 4px 0 0, #000 4px 4px 0 1px;
   color: #f8f9fa;
   cursor: pointer;
-  display: inline-block;
   font-size: var(--font-size-1);
   overflow: visible;
   padding: 12px 40px;
   text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
 `
