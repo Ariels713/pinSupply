@@ -1,12 +1,4 @@
 import React from 'react'
-import {
-  Wrapper,
-  CardGrid,
-  ImageWrapper,
-  CollectionDescription,
-  CollectionTitle,
-} from './styles.js'
-import { createGlobalStyle } from 'styled-components'
 import CollectionCard from '../collectionsCard/index.js'
 
 function CollectionsHeader({ data, children }) {
