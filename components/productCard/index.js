@@ -14,6 +14,7 @@ import {
   CollectionTitle,
   CollectionDescription,
   Button,
+  SaleTag,
 } from './styles'
 function ProductCard({ cardAssets = [], variant }) {
   const [card, setCardData] = useState(cardAssets)
@@ -59,12 +60,10 @@ function ProductCard({ cardAssets = [], variant }) {
                       ) : (
                         <SalePrice>&#36;{price}</SalePrice>
                       )}
-                      {/* {compareAtPrice ? (
-                        <Price>&#36;{price}</Price>
-                      ) : (
-                        <SalePrice>&#36;{price}</SalePrice>
-                      )} */}
                     </DescriptionWrapper>
+                    {!compareAtPrice ? null : (
+                      <SaleTag place='start end'>Sale</SaleTag>
+                    )}
                   </ImageStackWrapper>
                   <CollectionDescription>{description}</CollectionDescription>
                   <Link to={`/${slug}`}>
