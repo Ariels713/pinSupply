@@ -10,23 +10,31 @@ import {
   CollectionDescription,
   CollectionTitle,
   Price,
+  ImageStackWrapper,
 } from './styles.js'
 
 function Product({ data }) {
   const productData = data.contentfulProduct
-  console.log(productData)
+
   return (
     <>
       <Layout>
         <Wrapper>
-          <GatsbyImage
-            image={getImage(productData.mainImage)}
-            alt={productData.title}
-          />
-          <DescriptionWrapper>
-            <CollectionTitle>{productData.title}</CollectionTitle>
-            <Price>&#36;{productData.price}</Price>
-          </DescriptionWrapper>
+          <ImageStackWrapper>
+            <GatsbyImage
+              image={getImage(productData.mainImage)}
+              alt={productData.title}
+              style={{
+                borderTopLeftRadius: '20px',
+                borderTopRightRadius: '20px',
+                overflow: 'hidden',
+              }}
+            />
+            <DescriptionWrapper place='end center'>
+              <CollectionTitle>{productData.title}</CollectionTitle>
+              <Price>&#36;{productData.price}</Price>
+            </DescriptionWrapper>
+          </ImageStackWrapper>
 
           <CollectionDescription>
             {productData.description}
