@@ -26,9 +26,7 @@ function ProductCard({ cardAssets = [], variant }) {
       <GridWrapper>
         <CardGrid>
           {sortedData.map((card) => {
-            {
-              /* console.log('cards', card) */
-            }
+            console.log('card', card)
             const {
               id,
               slug,
@@ -56,12 +54,16 @@ function ProductCard({ cardAssets = [], variant }) {
                     </Link>
                     <DescriptionWrapper place='end center'>
                       <CollectionTitle>{title}</CollectionTitle>
-                      {/* <Price>&#36;{price}</Price> */}
-                      {compareAtPrice ? (
+                      {!compareAtPrice ? (
                         <Price>&#36;{price}</Price>
                       ) : (
-                        <SalePrice>&#36;{compareAtPrice}</SalePrice>
+                        <SalePrice>&#36;{price}</SalePrice>
                       )}
+                      {/* {compareAtPrice ? (
+                        <Price>&#36;{price}</Price>
+                      ) : (
+                        <SalePrice>&#36;{price}</SalePrice>
+                      )} */}
                     </DescriptionWrapper>
                   </ImageStackWrapper>
                   <CollectionDescription>{description}</CollectionDescription>
