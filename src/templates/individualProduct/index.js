@@ -16,7 +16,6 @@ import {
 
 function Product({ data, children }) {
   const productData = data.contentfulProduct
-  console.log('datas', data)
   return (
     <>
       <Layout>
